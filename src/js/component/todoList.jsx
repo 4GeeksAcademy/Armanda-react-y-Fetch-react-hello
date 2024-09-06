@@ -79,7 +79,7 @@ function TodoList() {
 
   return (
 
-    <div className="container">
+    <div>
       <div className="d-flex justify-content-center mt-20">
         <div className="d-flex">
           <input
@@ -99,15 +99,17 @@ function TodoList() {
       </div>
 
       <div>
+        <ul>
 
-        <div className="d-flex justify-content-center mt-5 flex-column align-items-center">
-          {listaTareas.map((task) => (
-            <div className="d-flex mt-5" key={task.id}>
-              <h4>{task.label}</h4>
-              <button onClick={() => handleDelete(task.id)} className="btn btn-warning text-white ms-5 mx-70"><em>Borrar</em></button>
-            </div>
-          ))}
-        </div>
+          <div className="d-flex justify-content-center mt-5 flex-column align-items-center">
+            {listaTareas.map((task) => (
+              <div className="d-flex mt-5" key={task.id}>
+                <h4>{task.label}</h4>
+                <button onClick={() => handleDelete(task.id)} className="btn btn-warning text-white ms-5 mx-70"><em>Borrar</em></button>
+              </div>
+            ))}
+          </div>
+        </ul>
 
       </div>
 
